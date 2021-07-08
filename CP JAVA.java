@@ -11,7 +11,7 @@ public class Main {
  
     static void run() {
         boolean tc = true;
-        AdityaFastIO r = new AdityaFastIO();
+        ImranIO r = new ImranIO();
         //FastReader r = new FastReader();
  
         try (OutputStream out = new BufferedOutputStream(System.out)) {
@@ -51,7 +51,7 @@ public class Main {
         }
     }
  
-    static class AdityaFastIO {
+    static class ImranIO {
         final private int BUFFER_SIZE = 1 << 16;
         private final DataInputStream din;
         private final byte[] buffer;
@@ -59,14 +59,14 @@ public class Main {
         public BufferedReader br;
         public StringTokenizer st;
  
-        public AdityaFastIO() {
+        public ImranIO() {
             br = new BufferedReader(new InputStreamReader(System.in));
             din = new DataInputStream(System.in);
             buffer = new byte[BUFFER_SIZE];
             bufferPointer = bytesRead = 0;
         }
  
-        public AdityaFastIO(String file_name) throws IOException {
+        public ImranIO(String file_name) throws IOException {
             din = new DataInputStream(new FileInputStream(file_name));
             buffer = new byte[BUFFER_SIZE];
             bufferPointer = bytesRead = 0;
