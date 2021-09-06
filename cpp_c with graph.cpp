@@ -1,68 +1,81 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-
-#define gc getchar_unlocked
-#define fo(i,n) for(i=0;i<n;i++)
-#define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
-#define ll long long
-#define si(x)	scanf("%d",&x)
-#define sl(x)	scanf("%lld",&x)
-#define ss(s)	scanf("%s",s)
-#define pi(x)	printf("%d\n",x)
-#define pl(x)	printf("%lld\n",x)
-#define ps(s)	printf("%s\n",s)
-#define deb(x) cout << #x << "=" << x << endl
-#define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
-#define pb push_back
-#define mp make_pair
-#define F first
-#define S second
-#define all(x) x.begin(), x.end()
-#define clr(x) memset(x, 0, sizeof(x))
-#define sortall(x) sort(all(x))
-#define tr(it, a) for(auto it = a.begin(); it != a.end(); it++)
-#define PI 3.1415926535897932384626
-typedef pair<int, int>	pii;
-typedef pair<ll, ll>	pl;
-typedef vector<int>		vi;
-typedef vector<ll>		vl;
-typedef vector<pii>		vpii;
-typedef vector<pl>		vpl;
-typedef vector<vi>		vvi;
-typedef vector<vl>		vvl;
-mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
-int rng(int lim) {
-	uniform_int_distribution<int> uid(0,lim-1);
-	return uid(rang);
-}
-int mpow(int base, int exp); 
-void ipgraph(int n, int m);
-void dfs(int u, int par);
-
-const int mod = 1'000'000'007;
-const int N = 3e5, M = N;
-//=======================
-
-vi g[N];
-int a[N];
-
-void solve() {
-  int i, j, n, m;   //CODE TO BE WRITTEN HERE
-}
-
-int main() {
-    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    srand(chrono::high_resolution_clock::now().time_since_epoch().count());
-
-    int t = 1;
-    cin >> t;
-    while(t--) {
-      solve();
-    }
-
-    return 0;
-}
+ 
+#define google(tc) cout<<"Case #"<<tc++<<": ";
+ 
+#define GetSetBolt ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL); 
+#define LL long long int  
+#define LD long double  
+#define DD double double  
+ 
+#define max3(a,b,c) max(a,max(b,c)) 
+#define min3(a,b,c) min(a,min(b,c)) 
+#define FF first 
+#define SS second 
+#define pushb push_back 
+#define pushf push_front 
+#define popb pop_back  
+#define popf pop_front  
+#define endl '\n'
+ 
+#define in(arr,n) for(int i=0;i<n;i++) cin>>arr[i];
+#define in2(arr,n,m) for(int i=0;i<n;i++){ for(int j=0;j<m;j++) cin>>arr[i][j];}
+#define dis(arr,n) for(int i=0;i<n;i++) cout<<arr[i]<<" "; cout<<endl;
+#define dis2(arr,n,m) for(int ii=0;ii<n;ii++){for(int j=0;j<m;j++)cout<<arr[ii][j]<<" ";cout<<endl;} 
+#define TC() int t=0;cin>>t; while(t--) 
+#define FOR(is,n,ip) for(is;is<n;is+=ip)
+#define FOr(x,z) for(x;x<z;x++) 
+#define For(n) for(LL i=0;i<n;i++)
+#define all(x) x.begin(),x.end()
+#define allr(x) x.rbegin(),x.rend()
+ 
+#define toLower(s) transform(s.begin(),s.end(),s.begin(),::tolower)
+#define toUpperr(s) transform(s.begin(),s.end(),s.begin(),::toupper)
+ 
+#define sortAdesc(arr,n) sort(arr,arr+n, greater<int>());
+#define sortVdesc(v) sort(v.begin(), v.end(), greater<int>());
+ 
+#define mem0(X) memset((X), 0, sizeof((X)))
+#define memx(X,x)  memset((X), x, sizeof((X)))
+#define setbits(X)  __builtin_popcountll(X)
+#define precise(X)  cout<<fixed << setprecision(X);
+ 
+typedef pair<int, int> PII; 
+typedef pair<LL, LL> PLL; 
+typedef pair<string, string> PSS; 
+typedef pair<string, LL> PSL; 
+ 
+typedef vector<int> VI;  
+typedef vector<LL> VL;  
+typedef vector<string> VS; 
+typedef vector<VI> VVI;  
+typedef vector<VL> VVL; 
+typedef vector<VS> VVS; 
+typedef vector<PII> VPII; 
+typedef vector<PLL> VPLL; 
+typedef vector<PSS> VPSS; 
+typedef vector<PSL> VPSL; 
+ 
+typedef map<int,int> MII; 
+typedef map<LL,LL> MLL;   
+typedef map<char,LL> MCL;  
+typedef map<char,int> MCI; 
+typedef map<char,LL> MCL;   
+typedef map<string,string> MSS;  
+typedef map<string,int> MSI;  
+typedef map<string,LL> MSL; 
+ 
+typedef unordered_map<int,int> UMII; 
+typedef unordered_map<LL,LL> UMLL;   
+typedef unordered_map<char,LL> UMCL;  
+typedef unordered_map<char,int> UMCI; 
+typedef unordered_map<char,LL> UMCL;   
+typedef unordered_map<string,string> UMSS;  
+typedef unordered_map<string,int> UMSI;  
+typedef unordered_map<string,LL> UMSL; 
+ 
+LL lcm(LL a, LL b) 
+{ return (a * (b / __gcd(a, b))); }
 
 int mpow(int base, int exp) {
   base %= mod;
@@ -91,4 +104,73 @@ void dfs(int u, int par){
 		dfs(v, u);
 	}
 }
+ 
+string intToString(LL a)
+{
+    char x[100];
+    sprintf(x, "%lld", a);
+    string s = x;
+    return s;
+}
+ 
+LL stringToInt(string a)
+{
+    char x[100];
+    LL res;
+    strcpy(x, a.c_str());
+    sscanf(x, "%lld", &res);
+    return res;
+}
+ 
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+  
+    for (int i = 2; i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+  
+    return true;
+}
+ 
+string to_binary(LL n)
+{
+    int bin[100];
+     int i = 0;
+    while (n > 0) {
+        bin[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+    string s="";
+    for(int j=i-1;j>=0;j--)
+        s+=to_string(bin[j]);
+    
+    return s;
+}
+ 
+ 
+const int n = 3e5 + 9;
+int v[n];
+ 
+int main() {
+    GetSetBolt;
+    for(int i=1;i<n;i++) 
+    {
+        v[i]=v[i-1]^(i-1);
+    }
+ 
+    TC(){
+ 
+        int m,x;
+        cin>>m>>x;
+        int mx=v[m];
+        if (mx==x)cout<<m<<endl;
+        else if ((mx^x)==m) cout<<m+2<<endl;
+        else cout<<m+1<<endl;
+    }
+}
+ 
+
 
