@@ -3,7 +3,7 @@ using namespace std;
  
 #define google(tc) cout<<"Case #"<<tc++<<": ";
  
-#define GetSetBolt ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL); 
+#define ZapIO ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL); 
 #define LL long long int  
 #define LD long double  
 #define DD double double  
@@ -155,20 +155,10 @@ const int n = 3e5 + 9;
 int v[n];
  
 int main() {
-    GetSetBolt;
-    for(int i=1;i<n;i++) 
-    {
-        v[i]=v[i-1]^(i-1);
-    }
- 
+    ZapIO;
     TC(){
- 
-        int m,x;
-        cin>>m>>x;
-        int mx=v[m];
-        if (mx==x)cout<<m<<endl;
-        else if ((mx^x)==m) cout<<m+2<<endl;
-        else cout<<m+1<<endl;
+ 	LL n; cin >> n;
+	// Write your code here..
     }
 }
  
