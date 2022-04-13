@@ -1,4 +1,4 @@
-// this is my snippet feel free to do changes
+
 
 #include <bits/stdc++.h>
 
@@ -15,7 +15,7 @@ using namespace std;
 typedef long long int ll; 
 typedef vector<int> vi; 
 typedef pair<int, int> pi; 
-
+                                 // My macros
 #define F first 
 #define S second 
 #define PB push_back 
